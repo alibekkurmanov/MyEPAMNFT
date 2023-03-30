@@ -79,7 +79,7 @@ contract MyEPAMNFT is ERC721URIStorage {
 
     // royalty payment to a NFT original creator
     if (msg.value > 0) {
-      _owner.transfer(msg.value); 
+      _owner.transfer(msg.value);
     }
     
     emit NewEpicNFTMinted(msg.sender, newItemId);

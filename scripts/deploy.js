@@ -1,12 +1,12 @@
 const hre = require("hardhat");
 
 async function main() {
-  const AliToken = await hre.ethers.getContractFactory("AliToken");
-  const aliToken = await AliToken.deploy();
+  const MyEPAMNFT = await hre.ethers.getContractFactory("MyRoyaltyNFT");
+  const myEPAMNFT = await MyEPAMNFT.deploy();
 
-  await aliToken.deployed();
+  await myEPAMNFT.deployed();
 
-  console.log("Ali Token deployed: ", aliToken.address);
+  console.log("myEPAMNFT deployed: ", myEPAMNFT.address);
 }
 
 main().catch((error) => {
